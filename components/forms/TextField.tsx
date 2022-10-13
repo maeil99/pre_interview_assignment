@@ -19,7 +19,7 @@ const TextField = (props: ITextFieldProps) => {
       </label>
 
       <Field
-        className="dark:bg-black bg-white border dark:border-white border-gray-200 rounded-lg min-w-full outline-none font-poppins dark:text-white text-black text-base mt-4 px-4 py-3"
+        className="dark:bg-black bg-white border dark:border-white border-gray-200 rounded-lg min-w-full outline-none font-poppins dark:text-white text-black text-base mt-4 px-4 py-3 focus:border-blue-400"
         id={name}
         name={name}
         type={type}

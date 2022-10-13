@@ -5,16 +5,13 @@ import images from "../../../assets";
 
 const Banner = () => {
   return (
-    <div>
-      <div className="bg-black/70 dark:bg-white/70 w-full bg-cover bg-center relative">
-        <Image
-          src={images.banner}
-          objectFit="cover"
-          className="mix-blend-overlay"
-        />
-        <div className="absolute top-1/2 w-full text-center">
-          <Image src={images.logo} objectFit="cover" />
-        </div>
+    <div className="bg-black/70 dark:bg-white/70 relative">
+      <div className="mix-blend-overlay">
+        <Image src={images.banner}  objectFit={"fill"}/>
+      </div>
+
+      <div className="absolute sm:top-1/4 top-1/2 w-full text-center">
+        <Image src={images.logo} />
       </div>
     </div>
   );

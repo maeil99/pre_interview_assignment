@@ -4,7 +4,7 @@ import Link from 'next/link';
 import images from '../../assets';
 
 const Footer = () => (
-  <footer className="flexCenter flex-col border-t dark:border-black border-gray-100">
+  <footer className="sm:absolute sm:bottom-0 sm:right-1/2 flexCenter flex-col border-t dark:border-gray-100 border-gray-400 my-10">
     <div className="flexCenter w-full mt-5 dark:border-black border-gray-100 ">
       <div className="flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7">
         <p className="font-poppins dark:text-white text-black font-semibold text-base">

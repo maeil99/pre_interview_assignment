@@ -17,7 +17,7 @@ const Button = ({
     type={btnType}
     className={`${
       disabled ? "bg-gray-500" : "bg-black dark:bg-white"
-    } text-sm minlg:text-lg py-2 px-6 minlg:px-8 font-poppins font-semibold text-white dark:text-black border border-gray-300 ${classStyles}`}
+    } text-sm minlg:text-lg py-2 px-6 minlg:px-8 font-poppins hover:bg-gray-400 font-semibold text-white dark:text-black border border-gray-300 ${classStyles}`}
     onClick={handleClick}
     disabled={disabled}
   >

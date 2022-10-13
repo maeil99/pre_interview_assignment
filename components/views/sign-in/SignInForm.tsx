@@ -8,6 +8,7 @@ import FormikControl from "../../forms/FormikControl";
 import Button from "../../Button";
 import { IOptionsProps, FieldType } from "../../../types/formik.interface";
 import BareButton from "../../BareButton";
+import { useRouter } from "next/router";
 
 interface ISignInProps {
   email: string;
@@ -16,6 +17,7 @@ interface ISignInProps {
 }
 
 const SignInForm = () => {
+  const router = useRouter();
   const initialValues: ISignInProps = {
     email: "",
     password: "",
@@ -34,14 +36,17 @@ const SignInForm = () => {
   });
 
   const onSubmit = (values: ISignInProps) => {
+    if (!values) return;
     const { checkboxBtnRememberMe, email, password } = values;
     if (checkboxBtnRememberMe[0] === "rememberMe") {
       //do something
       localStorage.setItem("username", email);
       localStorage.setItem("password", password);
       console.log("remember me: ", values.checkboxBtnRememberMe);
+      router.push("/");
     } else {
       console.log(values);
+      router.push("/");
     }
   };
 
