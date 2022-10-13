@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute="class">
       <div className="dark:bg-black bg-white min-h-screen">
         <Layout>
-          <div className="pt-14">
+          <div className="py-20">
             <Component {...pageProps} />
           </div>
         </Layout>
