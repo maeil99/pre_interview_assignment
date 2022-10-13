@@ -5,11 +5,11 @@ import Banner from "./Banner";
 
 const SignIn = () => {
   return (
-    <div className="flex sm:flex-col flex-row items-center sm:space-x-0 space-x-28 sm:pr-0 pr-60">
-      <div className="sm:w-full w-8/12">
+    <div className="flex sm:flex-col flex-row items-center sm:space-x-0 space-x-28 sm:pr-0 lg:pr-10 pr-60">
+      <div className="sm:w-full lg:w-3/5 w-8/12">
         <Banner />
       </div>
-      <div className="sm:w-full sm:px-12 sm:py-32 sm:absolute sm:bg-white sm:dark:bg-black sm:top-72 w-4/12 sm:items-start items-center">
+      <div className="sm:w-full lg:w-2/5 sm:px-12 sm:py-32 sm:absolute sm:bg-white sm:dark:bg-black sm:top-72 w-4/12 sm:items-start items-center">
         <div className="flex flex-col space-y-1 pb-10 text-black dark:text-white font-[650] text-3xl">
           <h1>Hello,</h1>
           <h1>Welcome Back</h1>

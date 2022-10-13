@@ -10,7 +10,7 @@ const Banner = () => {
         <Image src={images.banner}  objectFit={"fill"}/>
       </div>
 
-      <div className="absolute sm:top-1/4 top-1/2 w-full text-center">
+      <div className="absolute sm:top-1/4 lg:top-1/3 top-1/2 w-full text-center">
         <Image src={images.logo} />
       </div>
     </div>
