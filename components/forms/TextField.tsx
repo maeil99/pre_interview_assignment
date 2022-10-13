@@ -13,13 +13,13 @@ const TextField = (props: ITextFieldProps) => {
     <div className="w-full pt-2">
       <label
         htmlFor={name}
-        className="flex-1 font-poppins dark:text-white text-black font-semibold text-xl"
+        className="flex-1 font-poppins dark:text-white text-black font-semibold sm:text-lg text-xl"
       >
         {label}
       </label>
 
       <Field
-        className="dark:bg-black bg-white border dark:border-white border-gray-200 rounded-lg min-w-full outline-none font-poppins dark:text-white text-black text-base mt-4 px-4 py-3 focus:border-blue-400"
+        className="dark:bg-black bg-white border dark:border-white border-gray-200 rounded-lg min-w-full outline-none font-poppins dark:text-white text-black sm:text-sm text-base mt-4 px-4 py-3 focus:border-blue-400"
         id={name}
         name={name}
         type={type}

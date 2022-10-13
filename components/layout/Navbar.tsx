@@ -81,6 +81,7 @@ const Navbar = () => {
               width={45}
               height={45}
               alt="logo"
+              className='filter invert dark:filter-none dark:invert-0'
             />
           </div>
         </Link>

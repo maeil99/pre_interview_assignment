@@ -19,7 +19,7 @@ const CheckBoxBtn = (props: IRadioBtnProps) => {
       </label>
 
       <Field
-        className="font-poppins dark:text-white text-black text-base"
+        className="font-poppins"
         id={name}
         name={name}
       >
@@ -28,7 +28,7 @@ const CheckBoxBtn = (props: IRadioBtnProps) => {
             options &&
             options.map((option) => {
               return (
-                <div key={option.key} className="flex flex-row space-x-2">
+                <div key={option.key} className="flex flex-row space-x-2 dark:text-white text-black sm:text-sm text-base">
                   <input
                     type="checkbox"
                     id={option.value}

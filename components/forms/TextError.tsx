@@ -6,7 +6,7 @@ interface IPageProps {
 }
 
 const TextError = ({ children }: IPageProps) => (
-  <div className="text-red-500 font-semibold py-2 flex w-full justify-end">
+  <div className="text-red-500 font-semibold py-2 flex w-full justify-end sm:text-sm text-base">
     {children}
   </div>
 );
