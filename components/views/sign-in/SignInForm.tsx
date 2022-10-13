@@ -7,8 +7,7 @@ import images from "../../../assets";
 import FormikControl from "../../forms/FormikControl";
 import Button from "../../Button";
 import { IOptionsProps, FieldType } from "../../../types/formik.interface";
-import SignInForm from "./SignInForm";
-import Banner from "./Banner";
+import BareButton from "../../BareButton";
 
 interface ISignInProps {
   email: string;
@@ -16,7 +15,7 @@ interface ISignInProps {
   checkboxBtnRememberMe: string[];
 }
 
-const SignIn = () => {
+const SignInForm = () => {
   const initialValues: ISignInProps = {
     email: "",
     password: "",
@@ -54,42 +53,50 @@ const SignIn = () => {
   ];
 
   return (
-    <div className="flex sm:flex-col flex-row items-center space-x-28 sm:pr-0 pr-60">
-      {/* <div className="object-contain w-8/12 sm:w-full bg-black/70">
-        <Image src={images.banner} />
-        <div className="absolute top-0 flex">
-          <p className="text-2xl font-extrabold text-green-500">HAI</p>
-        </div>
-      </div> */}
-      {/* <div className="sm:w-full w-[60%] border-8 border-blue-500">
-        <Banner/>
-      </div>
-      <div className="flex items-center border-8 border-red-500">
-        <SignInForm/>
-      </div> */}
-      <div className="w-8/12">
-        <Banner />
-      </div>
-      <div className="w-4/12 items-center">
-        <div className="flex  flex-col space-y-1 pb-10 text-black dark:text-white font-[650] text-3xl">
-          <h1>Hello,</h1>
-          <h1>Welcome Back</h1>
-        </div>
-        <SignInForm />
-      </div>
-
-      {/* <div
-            style={{
-              backgroundImage: `url(${images.banner.src})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-            }}
-            className='w-full'
-          >
-            <p className="text-2xl font-extrabold text-green-500">HAI</p>
-          </div> */}
-    </div>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      validationSchema={validationSchema}
+    >
+      {(formik) => (
+        <Form>
+          <div className="flex flex-col w-full">
+            <FormikControl
+              control="textField"
+              type={FieldType.TEXT}
+              label=""
+              name="email"
+              placeholder="example@gmail.com"
+            />
+            <FormikControl
+              control="textField"
+              type={FieldType.PASSWORD}
+              label=""
+              name="password"
+              placeholder="your password"
+            />
+            <div className="flex flex-row justify-between pt-2 text-black dark:text-gray-200">
+              <FormikControl
+                control="checkBoxBtn"
+                label=""
+                name="checkboxBtnRememberMe"
+                options={checkboxOption}
+              />
+              <BareButton btnName="Forgot Your Password?" />
+            </div>
+            <div className="mt-14 w-full flex justify-start">
+              <Button
+                btnName="Log In"
+                classStyles="rounded-xl"
+                btnType="submit"
+                disabled={!formik.isValid}
+              />
+            </div>
+          </div>
+        </Form>
+      )}
+    </Formik>
   );
 };
 
-export default SignIn;
+export default SignInForm;
